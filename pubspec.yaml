@@ -32,6 +32,7 @@ dependencies:
   splashscreen: ^1.2.0
   flutter_svg: ^0.17.4
   google_fonts: ^1.1.0
+  searchable_dropdown:
 
 
 dev_dependencies:
