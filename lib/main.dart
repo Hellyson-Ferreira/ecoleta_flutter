@@ -1,7 +1,14 @@
 import 'package:ecoleta_flutter/App/splash-page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light
+    ),
+  );
   runApp(MyApp());
 }
 
@@ -20,4 +27,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
