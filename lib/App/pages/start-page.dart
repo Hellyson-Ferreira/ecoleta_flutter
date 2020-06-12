@@ -1,8 +1,9 @@
-import 'package:ecoleta_flutter/App/home-page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../../home-page.dart';
 
 class StartPage extends StatefulWidget {
   @override

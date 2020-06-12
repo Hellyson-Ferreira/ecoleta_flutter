@@ -15,26 +15,33 @@ class Items extends StatefulWidget {
 }
 
 class _ItemsState extends State<Items> {
+  bool isSelected = false;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(
-        left: 8
-      ),
+      padding: const EdgeInsets.only(left: 8),
       child: GestureDetector(
         onTap: () {
-          print('object clicado');
+          setState(() {
+            isSelected = !isSelected;
+          });
         },
         child: Container(
-          width: 108,
-          height: 108,
+          width: 104,
+          height: 104,
           decoration: BoxDecoration(
-            color: Color(0xffE1FAEC),
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(8),
-              bottomRight: Radius.circular(8),
-            ),
-          ),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter, 
+                colors: [
+                   isSelected?Color(0xFFFFFFFF):Color(0xffE1FAEC),
+                   Color(0xffE1FAEC),
+                ], 
+              ),
+             
+              border: Border.all(
+                  color: isSelected ? Color(0xff34CB79) : Colors.white),
+              borderRadius: BorderRadius.all(Radius.circular(8))),
           child: Padding(
             padding:
                 const EdgeInsets.only(top: 22, bottom: 14, left: 22, right: 22),
@@ -51,7 +58,7 @@ class _ItemsState extends State<Items> {
                 Text(
                   widget.title,
                   style: GoogleFonts.roboto(
-                    fontSize: 12,
+                    fontSize: 11,
                     color: Color(0xff322153),
                     fontWeight: FontWeight.normal,
                     fontStyle: FontStyle.normal,

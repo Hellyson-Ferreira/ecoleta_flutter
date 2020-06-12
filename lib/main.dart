@@ -1,4 +1,4 @@
-import 'package:ecoleta_flutter/App/splash-page.dart';
+import 'package:ecoleta_flutter/App/pages/splash-page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

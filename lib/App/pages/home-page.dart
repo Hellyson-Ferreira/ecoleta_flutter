@@ -1,8 +1,8 @@
+import 'package:ecoleta_flutter/App/components/itens.dart';
+import 'package:ecoleta_flutter/App/components/map-view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'models/itens-colect.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -62,6 +62,7 @@ class _HomePageState extends State<HomePage> {
                 color: Color(0xff6C6C80),
               ),
             ),
+            MapWidget(),
             SizedBox(
               height: 108,
               width: 4000,
